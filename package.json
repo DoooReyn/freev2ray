@@ -1,0 +1,17 @@
+{
+  "name": "v2ray-free",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "v2ray"
+  ],
+  "author": "DoooReyn",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
