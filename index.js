@@ -1,4 +1,5 @@
 const REQ = require( "request" );
+const CLIP = require( "copy-paste" );
 const URL = "https://view.freev2ray.org/";
 REQ.get( URL, ( err, _, data ) => {
   if ( err ) {
@@ -8,7 +9,8 @@ REQ.get( URL, ( err, _, data ) => {
   for ( let i = 0; i < lines.length; i++ ) {
     let text = lines[ i ];
     if ( text.indexOf( "data-clipboard-text" ) > -1 ) {
-      console.log( text.split( '"' )[ 3 ] );
+      CLIP.copy( text.split( '"' )[ 3 ] );
+      console.log( "服务器地址已经复制到剪切板" );
     }
   }
 } );
